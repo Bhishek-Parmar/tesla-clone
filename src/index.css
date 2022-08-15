@@ -10,6 +10,12 @@ body{
   height: 100vh;
   overflow-x:hidden;
 }
+a{
+  text-decoration: none;
+  outline: none;
+  transition: all ease-in 0.4s;
+}
+
 
 @keyframes animateDown {
   0%, 20%, 50%, 80%, 100% {

@@ -1,25 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal'
 
 function Section( {title, description, leftBtnTxt, rightBtnTxt , backgroundImg} ) {
   return (
     <Wrap bgImage={backgroundImg}>
       <ItemText>
-        <h1>{ title}</h1>
+        <Fade top>
+        <h1>{title}</h1>
         <p>{description }</p>
+        </Fade>
       </ItemText>
       <Buttons>
+      <Fade bottom>
         <ButtonGroup>
           <LeftButton>
             {leftBtnTxt}
           </LeftButton>
-          
+
           { rightBtnTxt &&
             <RightButton>
               {rightBtnTxt}
             </RightButton>
           }
         </ButtonGroup>
+      </Fade>
         <DownArrow src="/images/down-arrow.svg"/>
       </Buttons>
     </Wrap>
@@ -84,5 +89,5 @@ const RightButton = styled(LeftButton)`
 const DownArrow = styled.img`
   height:40px;
   overflow-x:hidden;
-  animation:animateDown infinite 1.5s;
+  animation:animateDown infinite 1s;
 `
